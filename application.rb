@@ -1,6 +1,5 @@
 require "rubygems"
 require "bundler"
-Bundler.require(:default)
 
 module Tunequeue
   class Application
