@@ -11,6 +11,9 @@ if Tunequeue::Application.env == 'development'
   # Serve assets from /public
   use Rack::Static, :urls => ["/index.html", "/swfs"], :root => Tunequeue::Application.root(:public)
 end
+if Tunequeue::Application.env == 'production'
+  use Rack::Static, :urls => ["/assets"], :root => Tunequeue::Application.root(:public)
+end
 
 map("/assets") do
   run Tunequeue::Application.assets

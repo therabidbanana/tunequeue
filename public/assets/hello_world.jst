@@ -1,0 +1,11 @@
+(function() {
+  this.JST || (this.JST = {});
+  this.JST["hello_world"] = function anonymous(locals, attrs, escape, rethrow) {
+  var attrs = jade.attrs, escape = jade.escape, rethrow = jade.rethrow;
+  var buf = [];
+  with (locals || {}) {
+  var interp;
+  }
+  return buf.join("");
+  };
+}).call(this);
