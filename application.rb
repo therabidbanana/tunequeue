@@ -28,10 +28,12 @@ module Tunequeue
 
     # Initialize the application
     def self.initialize!
-      assets.prepend_path(File.join(root, 'assets', 'javascripts'))
-      assets.prepend_path(File.join(root, 'assets', 'stylesheets'))
-      assets.prepend_path(File.join(root, 'assets', 'templates'))
-      assets.register_engine '.jade', ::TiltJade::Template
+      unless Termvana::Application.env == "production"
+        assets.prepend_path(File.join(root, 'assets', 'javascripts'))
+        assets.prepend_path(File.join(root, 'assets', 'stylesheets'))
+        assets.prepend_path(File.join(root, 'assets', 'templates'))
+        assets.register_engine '.jade', ::TiltJade::Template
+      end
     end
 
   end
