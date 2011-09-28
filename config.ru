@@ -9,7 +9,11 @@ if Tunequeue::Application.env == 'development'
   use Rack::Reloader, 0
 
   # Serve assets from /public
-  use Rack::Static, :urls => ["/javascripts"], :root => Tunequeue::Application.root(:public)
+  use Rack::Static, :urls => ["/index.html", "/swfs"], :root => Tunequeue::Application.root(:public)
+end
+
+map("/assets") do
+  run Tunequeue::Application.assets
 end
 
 # Running thin :
@@ -22,4 +26,6 @@ end
 #
 #   bundle exec thin --max-persistent-conns 1024 --timeout 0 -V -R config.ru start
 #
-run Tunequeue::Application.routes
+map("/") do
+  run Tunequeue::Application.routes
+end

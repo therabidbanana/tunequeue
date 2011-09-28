@@ -20,6 +20,16 @@ gem 'async-rack'
 
 # Generic interface to multiple Ruby template engines - https://github.com/rtomayko/tilt
 # gem 'tilt'
+#
+
+gem 'virtus'
+gem 'sprockets'
+gem 'coffee-script'
+gem 'tilt-jade', :require => "tilt-jade/template"
+gem 'sass'
+gem 'activesupport', :require => "active_support/json"
+gem 'crack', :require => 'crack/xml'
+gem 'typhoeus'
 
 group :development do
   # Development gems
