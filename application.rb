@@ -1,6 +1,6 @@
 require "rubygems"
-require "bundler"
-Bundler.setup
+require "bundler/setup"
+# Bundler.setup
 
 module Tunequeue
   class Application
