@@ -28,13 +28,9 @@ gem 'activesupport', :require => "active_support/json"
 gem 'crack', :require => 'crack/xml'
 gem 'typhoeus'
 
-group :development do
-  # Development gems
-  # gem 'ruby-debug19'
-  gem 'coffee-script'
-  gem 'tilt-jade', :require => "tilt-jade/template"
-  gem 'sass'
-end
+gem 'coffee-script'
+gem 'tilt-jade', :require => "tilt-jade/template"
+gem 'sass'
 
 group :production do
 #   gem 'therubyracer-heroku', '0.8.1.pre3'
