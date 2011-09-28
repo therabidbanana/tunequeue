@@ -28,7 +28,7 @@ module Tunequeue
 
     # Initialize the application
     def self.initialize!
-      unless Termvana::Application.env == "production"
+      unless Tunequeue::Application.env == "production"
         assets.prepend_path(File.join(root, 'assets', 'javascripts'))
         assets.prepend_path(File.join(root, 'assets', 'stylesheets'))
         assets.prepend_path(File.join(root, 'assets', 'templates'))
