@@ -1,3 +1,4 @@
+# Raw websocket
 # jQuery.ws = jQuery.websocket "ws://#{window.location.host}/socket", 
 #   open: () ->
 #     console.log("Look! I'm online")
@@ -11,3 +12,11 @@
 #       console.log("User requested playing", e.data.url)
 #       soundManager.unload('playing')
 #       soundManager.play('playing', {url: e.data.url})
+#
+jQuery.pusher = pusher = new Pusher('f105fd947e7536085297')
+jQuery.ws = ws = pusher.subscribe('presence-room')
+ws.bind('client-play', ()->
+  console.log("User requested playing", e.data.url)
+  soundManager.unload('playing')
+  soundManager.play('playing', {url: e.data.url})
+)

@@ -38,6 +38,9 @@ $.extend({
 			if (data) m['data'] = data;
 			return this._send(JSON.stringify(m));
 		}
+    ws.trigger = function(type, data) {
+			return this.send(type, data);
+		}
 		$(window).unload(function(){ ws.close(); ws = null });
 		return ws;
 	}
