@@ -1,0 +1,26 @@
+development:
+  pusher:
+    app_id: '...'
+    auth_key: 'f105f...'
+    auth_secret: '85...'
+  twitter:
+    key: "Cwo9T..."
+    secret: "PSeh..."
+  admins:
+    twitter:
+      - therabidbanana
+      - mgeraci
+    
+production:
+  pusher:
+    app_id: '...'
+    auth_key: 'f105f...'
+    auth_secret: '85...'
+  twitter:
+    key: "Cwo9T..."
+    secret: "PSeh..."
+  admins:
+    twitter:
+      - therabidbanana
+      - mgeraci
+    
