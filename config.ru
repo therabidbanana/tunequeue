@@ -9,11 +9,21 @@ if Tunequeue::Application.env == 'development'
   use Rack::Reloader, 0
 
   # Serve assets from /public
-  use Rack::Static, :urls => ["/index.html", "/swfs"], :root => Tunequeue::Application.root(:public)
+  use Rack::Static, :urls => ["/index.html", "/swfs", "/favicon.ico", "/locked.html"], :root => Tunequeue::Application.root(:public)
 end
 if Tunequeue::Application.env == 'production'
-  use Rack::Static, :urls => ["/index.html", "/swfs", "/assets"], :root => Tunequeue::Application.root(:public)
+  use Rack::Static, :urls => ["/index.html", "/swfs", "/assets", '/favicon.ico', '/locked.html'], :root => Tunequeue::Application.root(:public)
 end
+
+use Rack::Session::Cookie, :key => 'rack.session',
+                               :domain => 'tunequeue.dev',
+                               :path => '/',
+                               :expire_after => 2592000,
+                               :secret => 'change_me'
+
+use OmniAuth::Strategies::Twitter, Tunequeue::Application.config['twitter']['key'], Tunequeue::Application.config['twitter']['secret']
+use MembersOnly
+
 
 map("/assets") do
   run Tunequeue::Application.assets

@@ -25,12 +25,17 @@ gem 'async-rack'
 gem 'virtus'
 gem 'sprockets'
 gem 'activesupport', :require => "active_support/json"
-gem 'crack', :require => 'crack/xml'
+gem 'crack', '~> 0.2.0'
 gem 'typhoeus'
+gem 'oa-oauth'
+
 
 gem 'coffee-script'
 gem 'tilt-jade', :require => "tilt-jade/template"
 gem 'sass'
+
+gem 'em-http-request'
+gem 'pusher'
 
 group :production do
 #   gem 'therubyracer-heroku', '0.8.1.pre3'

@@ -1,5 +1,6 @@
 require "rubygems"
 require "bundler/setup"
+require 'yaml'
 # Bundler.setup
 
 module Tunequeue
@@ -26,8 +27,21 @@ module Tunequeue
       @_routes ||= eval(File.read('./config/routes.rb'))
     end
 
+    def self.config
+      @_config ||= YAML::load( File.read( './config/settings.yml' ) )
+      @_config[env]
+    end
+
+    def self.pusher!
+      Pusher.app_id = config['pusher']['app_id']
+      Pusher.key = config['pusher']['auth_key']
+      Pusher.secret = config['pusher']['auth_secret']
+    end
+
     # Initialize the application
     def self.initialize!
+      pusher!
+      
       unless Tunequeue::Application.env == "production"
         assets.prepend_path(File.join(root, 'assets', 'javascripts'))
         assets.prepend_path(File.join(root, 'assets', 'stylesheets'))
