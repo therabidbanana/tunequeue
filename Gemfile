@@ -31,12 +31,15 @@ gem 'oa-oauth'
 gem 'aws-s3', :require => "aws/s3"
 
 
-gem 'coffee-script'
-gem 'tilt-jade', :require => "tilt-jade/template"
-gem 'sass'
 
 gem 'em-http-request'
 gem 'pusher'
+
+group :development do
+  gem 'coffee-script'
+  gem 'tilt-jade', :require => "tilt-jade/template"
+  gem 'sass'
+end
 
 group :production do
 #   gem 'therubyracer-heroku', '0.8.1.pre3'
