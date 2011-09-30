@@ -1,8 +1,28 @@
+What is it?
+===========
+
+A turntable.fm ripoff. Because turntable screws up way too often, and is getting too restrictive.
+
+It's a simple app for collaboratively building a playlist and listening to it. Songs are stored on S3,
+and authentication done via Twitter. 
+
+As it's an exclusive members-only deal, we can be less restrictive than turntable.fm. People will be
+able to download songs they hear, play the full albums from the same artist, etc. 
+
+
+Obligatory Legal Stuff
+======================
+
+You install this on your own server - we are not responsible for what copyright laws you may or may 
+not break with it. There is plenty of Creative Commons music you could legally listen to with this app. 
+We do not encourage violating copyright law in any way.
+
+
 Can I see it?
 =============
 
-Nope. Run it on your own server - it uses S3, making it publicly
-available could get really expensive really quickly.
+If you're on the list already, yes. Otherwise, nope - you'll have to run it on your own server. 
+It uses S3 to store and stream music, making it publicly available could get really expensive really quickly.
 
 LICENSE (MIT)
 =======
