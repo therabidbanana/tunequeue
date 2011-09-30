@@ -7,14 +7,6 @@
       if (window.console && window.console.log) window.console.log(message);
     };
 
-    // Flash fallback logging - don't include this in production
-    WEB_SOCKET_DEBUG = true;
-
-    var pusher = new Pusher('f105fd947e7536085297');
-    var channel = pusher.subscribe('presence-room');
-    channel.bind('client-play', function(data) {
-      alert(data);
-    });
   </script>
   
   <link href="/assets/application.css" rel="stylesheet" />

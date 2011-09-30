@@ -38,9 +38,17 @@ module Tunequeue
       Pusher.secret = config['pusher']['auth_secret']
     end
 
+    def self.s3!
+     AWS::S3::Base.establish_connection!(
+        :access_key_id     => config['s3']['key'],
+        :secret_access_key => config['s3']['secret']
+      )
+    end
+
     # Initialize the application
     def self.initialize!
       pusher!
+      s3!
       
       unless Tunequeue::Application.env == "production"
         assets.prepend_path(File.join(root, 'assets', 'javascripts'))

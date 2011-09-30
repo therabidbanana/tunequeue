@@ -28,6 +28,7 @@ gem 'activesupport', :require => "active_support/json"
 gem 'crack', '~> 0.2.0'
 gem 'typhoeus'
 gem 'oa-oauth'
+gem 'aws-s3', :require => "aws/s3"
 
 
 gem 'coffee-script'

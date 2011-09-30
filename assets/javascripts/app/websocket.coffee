@@ -15,8 +15,8 @@
 #
 jQuery.pusher = pusher = new Pusher('f105fd947e7536085297')
 jQuery.ws = ws = pusher.subscribe('presence-room')
-ws.bind('client-play', ()->
-  console.log("User requested playing", e.data.url)
+ws.bind('client-play', (data)->
+  console.log("User requested playing", data.url)
   soundManager.unload('playing')
-  soundManager.play('playing', {url: e.data.url})
+  soundManager.play('playing', {url: data.url})
 )

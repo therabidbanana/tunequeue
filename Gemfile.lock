@@ -5,6 +5,11 @@ GEM
     addressable (2.2.6)
     async-rack (0.5.1)
       rack (~> 1.1)
+    aws-s3 (0.6.2)
+      builder
+      mime-types
+      xml-simple
+    builder (3.0.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -84,6 +89,7 @@ GEM
     url_mount (0.2.1)
       rack
     virtus (0.0.8)
+    xml-simple (1.1.0)
 
 PLATFORMS
   ruby
@@ -91,6 +97,7 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   async-rack
+  aws-s3
   coffee-script
   crack (~> 0.2.0)
   cramp
