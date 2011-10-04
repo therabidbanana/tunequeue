@@ -34,10 +34,10 @@ gem 'aws-s3', :require => "aws/s3"
 
 gem 'em-http-request'
 gem 'pusher'
+gem 'tilt-jade', :require => "tilt-jade/template"
 
 group :development do
   gem 'coffee-script'
-  gem 'tilt-jade', :require => "tilt-jade/template"
   gem 'sass'
 end
 
