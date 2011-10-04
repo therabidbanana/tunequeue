@@ -2,7 +2,7 @@ _ Come up with a good name
 _ Make it prettier
 _ Organize list of files better
 * Lock it down to members only
-_ S3 Authenticated calls
+* S3 Authenticated calls
 _ Simple queue support 
 _ Simple upload support
 * Pusher support (waiting for clientside message approval)
