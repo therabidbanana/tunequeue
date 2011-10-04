@@ -1,2 +1,42 @@
 body
-  color: red
+  height: 100%
+  margin: 0
+  padding: 0
+  background: #eef
+
+#library
+  position: absolute
+  right: 0
+  height: 100%
+  width: 15%
+  overflow: auto
+  overflow: auto
+
+  background: #fff
+  .song
+    h1
+      font-size: 1em
+#chat_window
+  float: left
+  width: 260px
+  position: relative
+  #chat_log
+    position: relative
+    height: 300px
+    overflow-y: scroll
+    overflow-x: hidden
+    padding-bottom: 40px
+
+  #header
+    position: absolute
+    width: 100%
+    z-index: 30
+    background: blue
+    bottom: 0
+  #presence
+    display: none
+    position: absolute
+    top: 0
+    .typing
+      color: red
+    
