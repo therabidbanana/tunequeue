@@ -3,6 +3,7 @@ jQuery ($)->
   $('body').empty()
   $('body').append($('<div id="library">'))
   $('body').append(JST['chat_window']())
+  $('body').append(JST['settings']())
   $.library.tracks()
 soundManager.url = '/swfs/'
 soundManager.onready ()->

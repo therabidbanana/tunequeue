@@ -15,8 +15,12 @@ class MembersOnly
     @options['whitelist'].any?{ |foo| path.match(foo)}
   end
   def on_the_list?(provider, uid)
-    return false unless Tunequeue::Application.config.has_key? 'admins'
-    return false unless Tunequeue::Application.config['admins'].has_key? provider
-    Tunequeue::Application.config['admins'][provider].include?(uid)
+    if Tunequeue::Application.config.has_key?('admins') && 
+      Tunequeue::Application.config['admins'].has_key?(provider) && 
+      Tunequeue::Application.config['admins'][provider].include?(uid)
+      return true 
+    end
+    
+    Settings.guest_list_includes?(provider, uid)
   end
 end

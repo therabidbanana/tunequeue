@@ -6,4 +6,5 @@ HttpRouter.new do
   add('/pusher/auth').to(PusherAuthAction)
   add('/auth/:provider/callback').to(OmniauthCallbackAction)
   add('/auth/failure').redirect("/locked.html")
+  add('/settings').to(SettingsAction)
 end

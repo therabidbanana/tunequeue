@@ -33,8 +33,12 @@ module Tunequeue
     end
 
     def self.mongo
-      @_mongo_uri ||= ENV['MONGOHQ_URL'] || "mongodb://localhost/tunequeue"
-      @_mongo_conn ||= Mongo::Connection.from_uri(@_mongo_uri)
+      @_mongo_uri ||= ENV['MONGOHQ_URL'] || config['mongo']
+      if @_mongo_uri
+        @_mongo_conn = Mongo::Connection.from_uri(@_mongo_uri)
+      else
+        @_mongo_conn = Mongo::Connection.new.db("tunequeue")
+      end
     end
 
     def self.pusher!

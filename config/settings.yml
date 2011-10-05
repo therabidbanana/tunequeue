@@ -1,0 +1,31 @@
+development:
+  pusher:
+    app_id: '8886'
+    auth_key: 'f105fd947e7536085297'
+    auth_secret: '85ba79b78e8826e7fcef'
+  twitter:
+    key: "Cwo9Tffc5d1W3ZC7YlQLw"
+    secret: "PSehR1G5dFwoDtl3CuD0B3KNTMl8lBdcWTcNteLvhik"
+  s3:
+    key: "AKIAIM2AYG53ROD4ECJA"
+    secret: "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"
+    bucket: "tunequeue"
+  admins:
+    twitter:
+      - mgeraci
+    
+production:
+  pusher:
+    app_id: '8886'
+    auth_key: 'f105fd947e7536085297'
+    auth_secret: '85ba79b78e8826e7fcef'
+  twitter:
+    key: "Cwo9Tffc5d1W3ZC7YlQLw"
+    secret: "PSehR1G5dFwoDtl3CuD0B3KNTMl8lBdcWTcNteLvhik"
+  admins:
+    twitter:
+      - mgeraci
+  s3:
+    key: "AKIAIM2AYG53ROD4ECJA"
+    secret: "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"
+    bucket: "tunequeue"
