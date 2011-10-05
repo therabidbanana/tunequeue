@@ -34,6 +34,7 @@ gem 'aws-s3', :require => "aws/s3"
 
 gem 'em-http-request'
 gem 'pusher'
+gem 'mongo'
 
 group :development do
   gem 'coffee-script'

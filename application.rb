@@ -32,6 +32,11 @@ module Tunequeue
       @_config[env]
     end
 
+    def self.mongo
+      @_mongo_uri ||= ENV['MONGOHQ_URL'] || "mongodb://localhost/tunequeue"
+      @_mongo_conn ||= Mongo::Connection.from_uri(@_mongo_uri)
+    end
+
     def self.pusher!
       Pusher.app_id = config['pusher']['app_id']
       Pusher.key = config['pusher']['auth_key']
