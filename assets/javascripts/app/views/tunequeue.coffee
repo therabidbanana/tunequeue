@@ -15,8 +15,3 @@ App.Views.Tunequeue = Backbone.View.extend
   render: ->
     $(this.el).html(JST['tunequeue']())
     
-  save: (e)->
-    $.post '/settings', $(e.target).serializeArray(), ()->
-      console.log("Submitted")
-    return false
-

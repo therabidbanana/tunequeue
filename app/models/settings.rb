@@ -8,7 +8,7 @@ class Settings
       end
       @settings
     end
-
+    
     def save!
       @coll.update({}, @settings)
     end
@@ -19,15 +19,12 @@ class Settings
     end
     
     def guest_list=(list)
-      if list.is_a?(String)
-        list = list.split("\n").map(&:strip)
-      end
       list = list.map do |i|
         if i =~ /@(.+)/
           {"provider" => "twitter", "uid" => $1}
         end
       end
-      settings["guest_list"] = list
+      settings["guest_list"] = list.compact.uniq
       save!
     end
   end

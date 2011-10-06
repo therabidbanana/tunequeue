@@ -1,7 +1,8 @@
 form
   #guest_list
-    .guest
-      input(name="guest_list[]", placeholder="@twitter_username")
-      a.remove x
+    .add
+      a.add_guest Add another?
+    each guest in settings.guest_list
+      != JST['partials/guest']({guest: guest})
     // textarea(name="guest_list", id="guest_list", placeholder="guest list, one member per line...")
-  input(type="submit")
+  input(type="submit", value="Save Changes")
