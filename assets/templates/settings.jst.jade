@@ -1,4 +1,7 @@
-form#settings
+form
   #guest_list
-    textarea(name="guest_list", id="guest_list", placeholder="guest list, one member per line...")
+    .guest
+      input(name="guest_list[]", placeholder="@twitter_username")
+      a.remove x
+    // textarea(name="guest_list", id="guest_list", placeholder="guest list, one member per line...")
   input(type="submit")
