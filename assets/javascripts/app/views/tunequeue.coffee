@@ -9,7 +9,7 @@ App.Views.Tunequeue = Backbone.View.extend
       console.log("Sound manager loaded")
     $('body').append(JST['chat_window']())
     this.settingsView = new App.Views.Settings()
-    $.library.tracks()
+    this.libraryView = new App.Views.Library()
     this.render()
 
   render: ->

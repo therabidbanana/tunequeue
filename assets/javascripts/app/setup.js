@@ -1,5 +1,4 @@
 //= require_self
-//= require app/music_lib
 //= require_tree ./views
 //= require_tree ./models
 var App = {

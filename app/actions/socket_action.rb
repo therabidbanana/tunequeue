@@ -1,3 +1,6 @@
+## Phased out for pusher app support
+# Eventually may want ability to toggle back and forth - just need this socket
+# to emulate a few events that pusher does.
 Cramp::Websocket.backend = :thin
 
 class SocketAction < Cramp::Websocket
