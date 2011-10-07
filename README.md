@@ -1,12 +1,14 @@
 What is it?
 ===========
 
-A turntable.fm ripoff. Because turntable screws up way too often, and is getting too restrictive.
+A turntable.fm ripoff. Because turntable was way too buggy there for a few weeks, 
+and is getting too restrictive to people that just want a sound track to
+play with friends.
 
-It's a simple app for collaboratively building a playlist and listening to it. Songs are stored on S3,
+Tunequeue is a simple app for collaboratively building a playlist and listening to it. Songs are stored on S3,
 and authentication done via Twitter. 
 
-As it's an exclusive members-only deal, we can be less restrictive than turntable.fm. People will be
+Since it's an exclusive members-only deal, we can be less restrictive than turntable.fm. People will be
 able to download songs they hear, play the full albums from the same artist, etc. 
 
 
