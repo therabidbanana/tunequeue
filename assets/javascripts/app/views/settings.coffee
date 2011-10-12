@@ -22,7 +22,7 @@ App.Views.Settings = Backbone.View.extend
     $(e.target).closest('.guest').remove()
     false
   addGuest: (e)->
-    $('#guest_list', this.el).append(JST['partials/guest'](guest_name: ""))
+    $('#guest_list', this.el).append(JST['partials/guest'](guest: {uid: "", provider: "twitter"}))
     false
 
   save: (e)->

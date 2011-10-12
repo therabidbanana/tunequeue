@@ -7,5 +7,5 @@ HttpRouter.new do
   add('/auth/:provider/callback').to(OmniauthCallbackAction)
   add('/auth/failure').redirect("/locked.html")
   add('/settings').to(SettingsAction)
-  add('/play_next').to(PlayNextAction)
+  add('/play_queue').to(PlayQueueAction)
 end

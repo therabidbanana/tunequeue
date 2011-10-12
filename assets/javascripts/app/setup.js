@@ -7,6 +7,7 @@ var App = {
   Models: {},
   Collections: {},
   Routers: {},
+  Player: null,
   init: function(){
     //# Backbone.history.start({pushState: true, silent: true});
     Tunequeue = new App.Views.Tunequeue();
@@ -19,5 +20,8 @@ var Tunequeue;
 
 jQuery(function($){
   App.init()
+  setInterval(function(){
+    Tunequeue.heartbeat();
+  }, 1500)
 })
 

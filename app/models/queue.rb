@@ -18,6 +18,11 @@ class Queue
       @coll.update({"_id" => @list["_id"]}, {"$push" => {"song_list"=>url}})
     end
 
+    def play_song(url)
+      @list = play_next
+      @coll.update({"_id" => @list["_id"]}, {"$pull" => {"song_list"=>url}})
+    end
+
   end
 end
 

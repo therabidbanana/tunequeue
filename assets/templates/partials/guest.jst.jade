@@ -1,4 +1,4 @@
 .guest
   if guest.provider == "twitter"
-    input(name="guest_list[]", placeholder="@twitter_username", value="@#{guest.uid}")
+    input(name="guest_list[]", placeholder="@twitter_username", value=guest.uid == "" ? "" : "@#{guest.uid}")
   a.remove x

@@ -20,3 +20,11 @@ ws.bind('client-play', (data)->
   soundManager.unload('playing')
   soundManager.play('playing', {url: data.url})
 )
+ws.bind('client-somebody-playing', (data)->
+  console.log("User wants to know if something is playing")
+)
+ws.bind('play-song', (data)->
+  console.log("User requested playing", data.url)
+  soundManager.unload('playing')
+  soundManager.play('playing', {url: data.url})
+)

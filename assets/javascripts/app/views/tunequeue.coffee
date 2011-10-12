@@ -14,4 +14,10 @@ App.Views.Tunequeue = Backbone.View.extend
 
   render: ->
     $(this.el).html(JST['tunequeue']())
-    
+  
+  heartbeat: ->
+    song = soundManager.getSoundById('playing')
+    if(!song?)
+      this.libraryView.playNext()
+    if(song.playState == 0 && song.readyState != 2)
+      this.libraryView.playNext()
